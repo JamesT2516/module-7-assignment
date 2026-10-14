@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Contact | James Taljaard</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +17,23 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Vue 3 Framework -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"
+    defer>
+    </script>
+
+    <!-- Reusable Vue Components -->
+    <script src="components/contact-form.js" defer></script>
+    <script src="components/confirmation-modal.js" defer></script>
+
+    <!-- Vue Application -->
+    <script src="vue-app.js" defer></script>
+
+    <!-- Existing Portfolio JavaScript -->
     <script src="script.js" defer></script>
+
 </head>
 
 <body>
@@ -75,7 +93,6 @@
 
     </header>
 
-
     <main class="contact-page">
 
         <section class="contact-form-section">
@@ -83,202 +100,86 @@
             <div class="section-heading reveal">
 
                 <p class="section-label">
-                    Module 6 JavaScript Project
+                    Module 7 Vue.js Project
                 </p>
 
                 <h2>Contact Me</h2>
 
                 <p class="section-intro">
-                    This contact form is part of my Module 6 project.
-                    It uses JavaScript to validate your information
-                    while you type and provide immediate feedback
-                    before the form can be submitted.
+                    This contact form builds on my Module 6 project.
+                    Vue.js now manages the form validation and
+                    confirmation modal using reusable components.
                 </p>
 
             </div>
 
-
             <div class="contact-intro reveal">
 
-                <h3>How the Form Works</h3>
+                <h3>How the Vue Form Works</h3>
 
                 <p>
-                    Each field is checked using JavaScript. Your name
-                    must contain letters, your email must follow a
-                    valid email format, and your message must contain
-                    at least 10 characters.
+                    Vue.js uses reactive data to check each field
+                    while you type. The name must contain letters
+                    and spaces, the email must be valid, and the
+                    message must contain at least 10 characters.
                 </p>
 
                 <p>
-                    If something is incorrect, a message appears
-                    directly below the relevant field. The form cannot
-                    continue until all three fields are valid.
+                    Error messages appear directly below the relevant
+                    fields using Vue's v-if directive. The form only
+                    becomes ready for submission when all three
+                    fields are valid.
                 </p>
 
                 <p>
-                    When every field passes validation, JavaScript
-                    prevents the normal form submission and displays
-                    a confirmation modal containing the information
-                    entered.
+                    Once submitted, a separate Vue component displays
+                    the entered information in a confirmation modal.
                 </p>
 
                 <p class="practice-note">
-                    This is a course project. The information entered
+                    This is a course project. Information entered
                     into this form is not sent to a server.
                 </p>
 
             </div>
 
+            <!-- Vue Application Container -->
 
-            <form
-                id="contact-form"
-                class="reveal"
-                novalidate>
+            <div id="vue-contact-app" v-cloak>
 
-                <div class="form-group">
+                <!-- Reusable Contact Form Component -->
 
-                    <label for="contact-name">
-                        Name
-                    </label>
+                <contact-form
+                    ref="contactForm"
+                    name-label="Name"
+                    email-label="Email Address"
+                    message-label="Message"
+                    name-placeholder="Enter your name"
+                    email-placeholder="name@example.com"
+                    message-placeholder="Enter a message of at least 10 characters"
+                    button-label="Send Message"
+                    @form-submitted="showConfirmation">
+                </contact-form>
 
-                    <input
-                        type="text"
-                        id="contact-name"
-                        name="name"
-                        autocomplete="name"
-                        aria-describedby="name-error"
-                        required>
+                <!-- Reusable Confirmation Modal Component -->
 
-                    <p
-                        id="name-error"
-                        class="error-message"
-                        aria-live="polite">
-                    </p>
+                <confirmation-modal
+                    :visible="isModalOpen"
+                    :submission="submittedData"
+                    @close="closeConfirmation">
+                </confirmation-modal>
 
-                </div>
+            </div>
 
-
-                <div class="form-group">
-
-                    <label for="contact-email">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="contact-email"
-                        name="email"
-                        autocomplete="email"
-                        aria-describedby="email-error"
-                        required>
-
-                    <p
-                        id="email-error"
-                        class="error-message"
-                        aria-live="polite">
-                    </p>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="contact-message">
-                        Message
-                    </label>
-
-                    <textarea
-                        id="contact-message"
-                        name="message"
-                        rows="7"
-                        aria-describedby="message-error"
-                        required></textarea>
-
-                    <p
-                        id="message-error"
-                        class="error-message"
-                        aria-live="polite">
-                    </p>
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="submit-button">
-                    Send Message
-                </button>
-
-            </form>
+            <noscript>
+                <p>
+                    JavaScript is required to use this contact form.
+                </p>
+            </noscript>
 
         </section>
 
     </main>
-
-
-    <!-- Confirmation Modal -->
-
-    <div
-        id="confirmation-modal"
-        class="confirmation-modal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="confirmation-title">
-
-        <div class="modal-content">
-
-            <button
-                type="button"
-                id="close-confirmation-modal"
-                class="modal-close"
-                aria-label="Close confirmation">
-                &times;
-            </button>
-
-            <p class="modal-label">
-                Form Successfully Validated
-            </p>
-
-            <h2 id="confirmation-title">
-                Message Submitted
-            </h2>
-
-            <p>
-                Your information passed the JavaScript validation.
-                These are the details you entered:
-            </p>
-
-
-            <div class="submitted-details">
-
-                <p>
-                    <strong>Name</strong>
-                    <span id="submitted-name"></span>
-                </p>
-
-                <p>
-                    <strong>Email</strong>
-                    <span id="submitted-email"></span>
-                </p>
-
-                <p>
-                    <strong>Message</strong>
-                    <span id="submitted-message"></span>
-                </p>
-
-            </div>
-
-
-            <button
-                type="button"
-                id="modal-done-button">
-                Done
-            </button>
-
-        </div>
-
-    </div>
-
 
     <footer>
         <p>&copy; 2026 James Taljaard</p>

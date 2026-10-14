@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,11 +8,13 @@
 
     <title>James Taljaard | Front-End Web Development Portfolio</title>
 
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
@@ -51,6 +54,8 @@
     </aside>
 
 
+    <!-- Header and Navigation -->
+
     <header>
 
         <h1>James Taljaard</h1>
@@ -68,7 +73,8 @@
                     <a
                         href="#about"
                         class="nav-tab active"
-                        data-tab="about">
+                        data-tab="about"
+                        aria-current="page">
                         About Me
                     </a>
                 </li>
@@ -108,7 +114,9 @@
 
     <main class="portfolio-main">
 
-        <!-- About Me -->
+        <!-- ========================================
+             About Me
+             ======================================== -->
 
         <section
             id="about"
@@ -143,7 +151,7 @@
                             <h3>Learning Through Practice</h3>
 
                             <p>
-                                Hi, I’m James Taljaard. I’m currently
+                                Hi, I'm James Taljaard. I'm currently
                                 completing a Front-end Web Development
                                 course and developing this portfolio
                                 alongside the course.
@@ -188,18 +196,20 @@
                             <h3>My Current Focus</h3>
 
                             <p>
-                                Module 6 is helping me develop a deeper
-                                understanding of DOM manipulation,
-                                event handling, form validation, and
-                                interactive user interfaces.
+                                In Module 7, I am learning how Vue.js can
+                                simplify the development of interactive
+                                websites through reusable components
+                                and reactive data.
                             </p>
 
                             <p>
-                                I am also being introduced to
-                                asynchronous JavaScript, API
-                                integration, modern JavaScript
-                                development tools, and the foundations
-                                of Vue.js.
+                                I am applying these concepts by upgrading
+                                my Module 6 contact form using Vue 3.
+                                The new version includes v-model for
+                                reactive inputs, computed properties for
+                                real-time validation, v-if for displaying
+                                error messages, and props and component
+                                events for communication.
                             </p>
 
                         </div>
@@ -228,7 +238,9 @@
         </section>
 
 
-        <!-- What I Am Learning -->
+        <!-- ========================================
+             What I Am Learning
+             ======================================== -->
 
         <section
             id="learning"
@@ -240,16 +252,16 @@
                 <div class="section-heading reveal">
 
                     <p class="section-label">
-                        Module 6
+                        Module 7
                     </p>
 
                     <h2>What I Am Learning</h2>
 
                     <p class="section-intro">
-                        I am now moving beyond basic JavaScript and
-                        learning how it can be used to create more
-                        useful, responsive, and interactive web
-                        experiences.
+                        In Module 7, I am learning how Vue.js
+                        makes it easier to build interactive
+                        websites using reusable components,
+                        reactive data, and dynamic user interfaces.
                     </p>
 
                 </div>
@@ -257,15 +269,17 @@
 
                 <div class="learning-grid">
 
+                    <!-- DOM Manipulation -->
+
                     <article class="learning-card reveal">
 
                         <h3>DOM Manipulation</h3>
 
                         <p>
-                            I am learning how JavaScript works with the
-                            Document Object Model to find elements and
-                            update webpage content without reloading
-                            the page.
+                            I have learned how JavaScript works with
+                            the Document Object Model to find elements
+                            and update webpage content without
+                            reloading the page.
                         </p>
 
                         <ul>
@@ -278,15 +292,17 @@
                     </article>
 
 
+                    <!-- Events and User Interaction -->
+
                     <article class="learning-card reveal">
 
                         <h3>Events and User Interaction</h3>
 
                         <p>
-                            I am learning how event listeners allow a
-                            webpage to respond to actions such as
-                            clicking, typing, submitting forms, and
-                            pressing keys.
+                            I have learned how JavaScript event
+                            listeners allow a webpage to respond
+                            to actions such as clicking, typing,
+                            submitting forms, and pressing keys.
                         </p>
 
                         <ul>
@@ -299,14 +315,17 @@
                     </article>
 
 
+                    <!-- Validation and Feedback -->
+
                     <article class="learning-card reveal">
 
                         <h3>Validation and Feedback</h3>
 
                         <p>
-                            For Assignment 6, I am applying JavaScript
-                            to validate user input while it is entered
-                            and provide useful feedback immediately.
+                            In Module 6, I developed a JavaScript
+                            contact form that validated user input
+                            as it was entered and provided immediate
+                            visual feedback.
                         </p>
 
                         <ul>
@@ -319,15 +338,17 @@
                     </article>
 
 
+                    <!-- Asynchronous JavaScript -->
+
                     <article class="learning-card reveal">
 
                         <h3>Asynchronous JavaScript</h3>
 
                         <p>
-                            Module 6 is introducing me to how
-                            JavaScript can manage tasks that take time
-                            without stopping the rest of a webpage
-                            from continuing to work.
+                            Module 6 introduced me to how JavaScript
+                            can manage tasks that take time without
+                            preventing the rest of a webpage from
+                            continuing to work.
                         </p>
 
                         <ul>
@@ -340,15 +361,17 @@
                     </article>
 
 
+                    <!-- Debugging and Modern Tools -->
+
                     <article class="learning-card reveal">
 
                         <h3>Debugging and Modern Tools</h3>
 
                         <p>
                             I am using browser developer tools to
-                            inspect and debug JavaScript more
-                            effectively and understand what is
-                            happening while my code runs.
+                            inspect and debug JavaScript, identify
+                            errors, and understand what is happening
+                            while my code runs.
                         </p>
 
                         <ul>
@@ -362,22 +385,73 @@
                     </article>
 
 
+                    <!-- Vue.js Foundations -->
+
                     <article class="learning-card reveal">
 
                         <h3>Vue.js Foundations</h3>
 
                         <p>
-                            I am being introduced to Vue.js and how a
-                            JavaScript framework can make interactive
-                            interfaces easier to organise and reuse.
+                            In Module 7, I am applying Vue 3 to
+                            create dynamic and interactive user
+                            interfaces using reusable components
+                            and reactive data.
                         </p>
 
                         <ul>
-                            <li>Reactive data</li>
-                            <li>Templates</li>
-                            <li>Directives</li>
-                            <li>Reusable components</li>
-                            <li>Props</li>
+                            <li>Vue application and components</li>
+                            <li>Reactive data and v-model</li>
+                            <li>Computed properties and validation</li>
+                            <li>Conditional rendering using v-if</li>
+                            <li>Component props and custom events</li>
+                        </ul>
+
+                    </article>
+
+
+                    <!-- Vue Contact Form Development -->
+
+                    <article class="learning-card reveal">
+
+                        <h3>Building Reusable Vue Components</h3>
+
+                        <p>
+                            I am using the component-based approach
+                            to separate the contact form, confirmation
+                            modal, and main Vue application into
+                            individual JavaScript files.
+                        </p>
+
+                        <ul>
+                            <li>Reusable contact form component</li>
+                            <li>Customisable form labels and placeholders</li>
+                            <li>Real-time reactive validation</li>
+                            <li>Separate confirmation modal component</li>
+                            <li>Communication between components</li>
+                        </ul>
+
+                    </article>
+
+
+                    <!-- Testing and Accessibility -->
+
+                    <article class="learning-card reveal">
+
+                        <h3>Responsive Design and Accessibility</h3>
+
+                        <p>
+                            I am continuing to improve how the
+                            portfolio behaves across different
+                            screen sizes while keeping interactive
+                            features accessible and easy to use.
+                        </p>
+
+                        <ul>
+                            <li>Mobile-first responsive layouts</li>
+                            <li>Accessible form labels</li>
+                            <li>Validation feedback using ARIA</li>
+                            <li>Keyboard-accessible modal controls</li>
+                            <li>Browser testing and debugging</li>
                         </ul>
 
                     </article>
@@ -389,7 +463,9 @@
         </section>
 
 
-        <!-- My Projects -->
+        <!-- ========================================
+             My Projects
+             ======================================== -->
 
         <section
             id="projects"
@@ -415,6 +491,8 @@
                 </div>
 
 
+                <!-- Project 01 -->
+
                 <article class="project-card reveal">
 
                     <div class="project-number">
@@ -426,9 +504,9 @@
                         <h3>Front-End Portfolio Website</h3>
 
                         <p>
-                            The portfolio began as a semantic HTML page
-                            and has developed through each stage of my
-                            front-end learning.
+                            The portfolio began as a semantic HTML
+                            page and has developed through each stage
+                            of my front-end learning.
                         </p>
 
                         <p>
@@ -442,6 +520,8 @@
 
                 </article>
 
+
+                <!-- Project 02 -->
 
                 <article class="project-card reveal">
 
@@ -469,6 +549,8 @@
                 </article>
 
 
+                <!-- Project 03 -->
+
                 <article class="project-card reveal">
 
                     <div class="project-number">
@@ -480,28 +562,26 @@
                         <h3>Module 6 Contact Form</h3>
 
                         <p>
-                            My current project is a dedicated contact
-                            page with JavaScript-powered validation.
+                            In Module 6, I developed a dedicated
+                            contact page with JavaScript-powered
+                            real-time validation.
                         </p>
 
                         <p>
-                            The form checks a visitor's name, email,
-                            and message while they type. If all fields
-                            are valid, JavaScript prevents the normal
-                            form submission and displays the entered
-                            information in a confirmation modal.
+                            The form checked a visitor's name,
+                            email, and message while they typed.
+                            Once every field was valid, JavaScript
+                            prevented normal form submission and
+                            displayed the information in a
+                            confirmation modal.
                         </p>
-
-                        <a
-                            href="contact.html"
-                            class="project-link">
-                            View Contact Form
-                        </a>
 
                     </div>
 
                 </article>
 
+
+                <!-- Project 04 -->
 
                 <article class="project-card reveal">
 
@@ -511,19 +591,64 @@
 
                     <div>
 
-                        <h3>Continuous Development</h3>
+                        <h3>Module 7 Vue.js Contact Form</h3>
 
                         <p>
-                            I am treating the portfolio as a long-term
-                            project rather than a finished page.
+                            For Assignment 7, I upgraded my
+                            JavaScript contact form to use Vue 3
+                            and reusable components.
                         </p>
 
                         <p>
-                            Each module gives me an opportunity to
-                            review existing code, improve the user
-                            experience, and introduce new techniques
-                            while keeping previous functionality
-                            working correctly.
+                            The form uses v-model to manage reactive
+                            input values, computed properties for
+                            real-time validation, and v-if to
+                            display error messages.
+                        </p>
+
+                        <p>
+                            Props allow the form labels and
+                            placeholders to be customised.
+                            Validated information is passed to
+                            a separate confirmation modal using
+                            component events.
+                        </p>
+
+                        <a
+                            href="contact.html"
+                            class="project-link">
+                            View Vue Contact Form
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 05 -->
+
+                <article class="project-card reveal">
+
+                    <div class="project-number">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>Continuous Development</h3>
+
+                        <p>
+                            I am treating the portfolio as a
+                            long-term project rather than a
+                            finished page.
+                        </p>
+
+                        <p>
+                            Each module gives me an opportunity
+                            to review existing code, improve
+                            the user experience, and introduce
+                            new techniques while keeping previous
+                            functionality working correctly.
                         </p>
 
                     </div>
@@ -536,6 +661,8 @@
 
     </main>
 
+
+    <!-- Footer -->
 
     <footer>
         <p>&copy; 2026 James Taljaard</p>

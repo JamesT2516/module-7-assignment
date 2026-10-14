@@ -998,3 +998,33 @@ footer p {
     }
 
 }
+
+
+
+/* ========================================
+   Module 7 - Vue.js Enhancements
+   ======================================== */
+
+/* Hide Vue content until the app is ready */
+[v-cloak] {
+    display: none;
+}
+
+/* Disabled submit button */
+.submit-button:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+/* Prevent hover effects on disabled buttons */
+.submit-button:disabled:hover,
+.submit-button:disabled:focus {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: none;
+}
+
+/* Keep the original formatting of submitted messages */
+.submitted-details span {
+    overflow-wrap: anywhere;
+}
